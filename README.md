@@ -14,7 +14,7 @@ See on sinu esitusrepo. Kõik failid lähevad repo juurkausta. Playbookid ehitad
 
 | Fail | Kust |
 |---|---|
-| `halb.sh`, `parem.sh` | A2 |
+| `halb.sh` | A2 |
 | `inventory.ini` | A3, B |
 | `bootstrap.yml` | A4, B |
 | `logid/teine_jooks.txt` | A5 |

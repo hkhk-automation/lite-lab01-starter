@@ -3,7 +3,7 @@
     {
       "name": "K1. Klassi failid olemas",
       "setup": "",
-      "run": "for f in halb.sh parem.sh inventory.ini bootstrap.yml logid/teine_jooks.txt README.md; do test -f \"$f\" || { echo \"PUUDU: $f\"; exit 1; }; done; echo OK",
+      "run": "for f in halb.sh inventory.ini bootstrap.yml logid/teine_jooks.txt README.md; do test -f \"$f\" || { echo \"PUUDU: $f\"; exit 1; }; done; echo OK",
       "input": "", "output": "OK", "comparison": "included", "timeout": 1, "points": 5
     },
     {
