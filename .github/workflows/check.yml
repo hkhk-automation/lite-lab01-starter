@@ -1,0 +1,26 @@
+name: Autograding
+
+# Jookseb iga push'i peale. Kontrollib faile, süntaksit ja tõendit, et jooksutasid (changed=0 logis).
+# Ansible't sinu masina vastu ei jooksutata.
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  kontroll:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Paigalda Ansible (testide jaoks)
+        run: pip install --quiet ansible
+
+      - name: Autograding
+        uses: education/autograding@v1
