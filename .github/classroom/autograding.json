@@ -28,7 +28,7 @@
       "output": "OK",
       "comparison": "included",
       "timeout": 1,
-      "points": 15
+      "points": 10
     },
     {
       "name": "4. Tõend: teine jooks changed=0",
@@ -38,7 +38,7 @@
       "output": "OK",
       "comparison": "included",
       "timeout": 1,
-      "points": 15
+      "points": 10
     },
     {
       "name": "5. Tõend: kolm masinat, kõigil changed=0",
@@ -48,12 +48,12 @@
       "output": "OK",
       "comparison": "included",
       "timeout": 1,
-      "points": 20
+      "points": 15
     },
     {
-      "name": "6. Kodutöö: admin.yml süntaks ja teine jooks changed=0",
+      "name": "6. Kodutöö: admin.yml (loop, authorized_key), teine jooks changed=0",
       "setup": "",
-      "run": "test -f admin.yml && ansible-playbook -i inventory.ini admin.yml --syntax-check >/dev/null && grep -q 'changed=0' logid/admin_teine_jooks.txt && echo OK",
+      "run": "test -f admin.yml && ansible-playbook -i inventory.ini admin.yml --syntax-check >/dev/null && grep -q 'loop' admin.yml && grep -q 'authorized_key' admin.yml && grep -q 'changed=0' logid/admin_teine_jooks.txt && echo OK",
       "input": "",
       "output": "OK",
       "comparison": "included",
@@ -61,7 +61,17 @@
       "points": 15
     },
     {
-      "name": "7. Kodutöö: oma/ playbook + README, vastused.md",
+      "name": "7. Kodutöö: hardening.yml (lineinfile, validate, handler), teine jooks changed=0",
+      "setup": "",
+      "run": "test -f hardening.yml && ansible-playbook -i inventory.ini hardening.yml --syntax-check >/dev/null && grep -q 'lineinfile' hardening.yml && grep -q 'validate' hardening.yml && grep -q 'handlers' hardening.yml && grep -q 'changed=0' logid/hardening_teine_jooks.txt && echo OK",
+      "input": "",
+      "output": "OK",
+      "comparison": "included",
+      "timeout": 3,
+      "points": 15
+    },
+    {
+      "name": "8. Kodutöö: oma/ playbook + README, vastused.md",
       "setup": "",
       "run": "ls oma/*.yml >/dev/null 2>&1 && test -f oma/README.md && test -f vastused.md && echo OK",
       "input": "",

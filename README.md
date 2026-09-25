@@ -11,17 +11,19 @@ See on sinu esitusrepo. Kõik failid lähevad repo juurkausta. Playbooki ehitad 
 
 | Fail | Kust | Klassis / kodus |
 |---|---|---|
-| `halb.sh`, `parem.sh` | Osa 2 | klassis |
-| `inventory.ini` | Osad 3 ja 9 | klassis |
-| `bootstrap.yml` | Osad 4 ja 10 | klassis |
-| `logid/teine_jooks.txt` | Osa 5 | klassis |
-| `logid/kolm_masinat.txt` | Osa 10 | klassis |
-| `README.md` | Osa 11: soovitud olek, käivituskäsk, mis triivis | klassis |
+| `halb.sh`, `parem.sh` | A2 | klassis |
+| `inventory.ini` | A3, B | klassis |
+| `bootstrap.yml` | A4, B | klassis |
+| `logid/teine_jooks.txt` | A5 | klassis |
+| `logid/kolm_masinat.txt` | B | klassis |
+| `README.md` | Dokumenteerimine: soovitud olek, käivituskäsk, drift, peegeldus | klassis |
 | `admin.yml` + `logid/admin_teine_jooks.txt` | Kodutöö 1 | kodus |
-| `oma/*.yml` + `oma/README.md` | Kodutöö 2 | kodus |
-| `vastused.md` | Kodutöö 3 | kodus |
+| `hardening.yml` + `logid/hardening_teine_jooks.txt` | Kodutöö 2 | kodus |
+| `oma/*.yml` + `oma/README.md` | Kodutöö 3 | kodus |
+| `vastused.md` | Kodutöö 4 | kodus |
+| `boonus.yml` | Boonus | kodus, vabatahtlik |
 
-`README.md` kirjutad Osa 11-s üle, see juhend jääb labori lehele alles.
+`README.md` kirjutad dokumenteerimise osas üle, see juhend jääb praktikumi lehele alles.
 
 ---
 
@@ -34,8 +36,9 @@ Igal push'il jookseb automaatne kontroll, tulemust näed **Actions** vahelehel.
 3. `bootstrap.yml` kasutab päris mooduleid (`user`, `package`, `copy`, `service`), mitte `command`/`shell`-i.
 4. `logid/teine_jooks.txt` näitab `changed=0`.
 5. `logid/kolm_masinat.txt`: kolm masinat, kõigil `changed=0`, ükski pole `unreachable` ega `failed`.
-6. Kodutöö: `admin.yml` süntaks on korras ja teine jooks on `changed=0`.
-7. Kodutöö: `oma/` playbook + README ja `vastused.md` on olemas.
+6. Kodutöö: `admin.yml` kasutab `loop`-i ja `authorized_key`-d, teine jooks `changed=0`.
+7. Kodutöö: `hardening.yml` kasutab `lineinfile`-i, `validate`-i ja handlerit, teine jooks `changed=0`.
+8. Kodutöö: `oma/` playbook + README ja `vastused.md` on olemas.
 
 Tõendi salvestad nii, et jooksutad playbooki ja suunad väljundi faili, näiteks:
 
