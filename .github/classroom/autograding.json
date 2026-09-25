@@ -1,9 +1,9 @@
 {
   "tests": [
     {
-      "name": "K1. Klassi failid olemas",
+      "name": "K1. Klassi failid olemas, README täidetud",
       "setup": "",
-      "run": "for f in halb.sh inventory.ini bootstrap.yml logid/teine_jooks.txt README.md; do test -f \"$f\" || { echo \"PUUDU: $f\"; exit 1; }; done; echo OK",
+      "run": "for f in halb.sh inventory.ini bootstrap.yml logid/teine_jooks.txt README.md; do test -f \"$f\" || { echo \"PUUDU: $f\"; exit 1; }; done; if grep -qE '\\[sinu nimi\\]|\\[2–4 lauset\\]|\\[ \\]|\\[mis |\\[Mis |\\[mida |\\[käsk' README.md; then echo 'README: täitmata kohti'; exit 1; fi; test \"$(wc -w < README.md)\" -ge 150 || { echo 'README: alla 150 sõna'; exit 1; }; echo OK",
       "input": "", "output": "OK", "comparison": "included", "timeout": 1, "points": 5
     },
     {

@@ -1,68 +1,46 @@
-# Lab 01 — Esimene playbook
+# Lab 01 · Esimene playbook
 
-📘 **Loeng:** <https://hkhk-automation.github.io/devops-lite/week01/lecture/>
-📖 **Praktikum:** <https://hkhk-automation.github.io/devops-lite/week01/lab/>
-🏠 **Kodune õpe ja kodutöö:** <https://hkhk-automation.github.io/devops-lite/week01/homework/>
+> Ülesanne on failis [ULESANNE.md](ULESANNE.md). Täida see mall oma tööga: asenda nurksulgudes kohad ja kustuta see kasti.
 
-See on sinu esitusrepo. Kõik failid lähevad repo juurkausta. Playbookid ehitad ise.
+**Nimi:** [sinu nimi]
 
----
+## Soovitud olek
 
-## Mis peab lõpuks repos olema
+Igas `veeb`-grupi masinas:
 
-**Klassis (praktikum):**
+- [mis kasutaja on olemas]
+- [mis pakett on paigaldatud]
+- [mida avaleht näitab]
+- [mis teenus käib ja kas käivitub buutimisel]
 
-| Fail | Kust |
-|---|---|
-| `halb.sh` | A2 |
-| `inventory.ini` | A3, B |
-| `bootstrap.yml` | A4, B |
-| `logid/teine_jooks.txt` | A5 |
-| `logid/kolm_masinat.txt` | B |
-| `README.md` (soovitud olek, käivituskäsk, drift, peegeldus) | Dokumenteerimine |
-
-**Kodus (kodune õpe ja kodutöö):**
-
-| Fail | Kust |
-|---|---|
-| `markmed.md`, `vastused.md` | I, H6, IV |
-| `admin.yml` + `logid/admin_teine_jooks.txt` | H1 |
-| `hardening.yml` + `logid/hardening_teine_jooks.txt` | H2 |
-| `baas.yml` + `logid/baas_teine_jooks.txt` | H3 |
-| `raport.yml` + `raportid/` | H4 |
-| `cron.yml` + `logid/cron_teine_jooks.txt` | H5 |
-| `logid/drift_check.txt` | H6 |
-| `oma/*.yml` + `oma/README.md` | III |
-| `boonus.yml` | IV, vabatahtlik |
-
----
-
-## Kontroll (roheline = valmis)
-
-Igal push'il jookseb automaatne kontroll, tulemust näed **Actions** vahelehel. Kokku 100 punkti: klassitöö 45, kodutöö 55.
-
-| Kontroll | Punkte |
-|---|---|
-| K1–K5: klassi failid, süntaks, päris moodulid, `changed=0` ühel ja kolmel masinal | 45 |
-| H1 `admin.yml`, H2 `hardening.yml` | 20 |
-| H3 `baas.yml`, H4 `raport.yml`, H5–H6 `cron.yml` + drift | 21 |
-| Märkmed, vastused (≥400 sõna), oma töö | 14 |
-
-Tõendi salvestad nii:
+## Käivitamine
 
 ```bash
-ansible-playbook -i inventory.ini <fail>.yml | tee logid/<fail>_teine_jooks.txt
+[käsk, millega playbook käivitatakse]
 ```
 
-`changed=0` tuleb ainult siis, kui kõik on juba paigas. Seega salvesta **teine** jooks.
+## Masinad
 
----
+| Nimi | OS | Veebi juurkaust |
+|---|---|---|
+| vm1 | [ ] | [ ] |
+| vm2 | [ ] | [ ] |
+| vm3 | [ ] | [ ] |
 
-## Esitamine
+## Drift (A7)
 
-```bash
-git add . && git commit -m "Lab 01"
-git push
-```
+[Mis kõrvalekalded tekitasid, mida ennustasid, mis tegelikult juhtus.]
 
-Tähtaeg on kirjas Classroom 50-s. Pushida võid mitu korda, arvesse läheb viimane.
+## Peegeldus
+
+1. Mitu rida pidid muutma, et üks masin asenduks kolmega? Mitu oleks 50 puhul?
+
+   [2–4 lauset]
+
+2. Mis ennustus läks mööda ja miks?
+
+   [2–4 lauset]
+
+3. Mis sinu töökohal praegu triivib, ja kuidas see välja tuleks?
+
+   [2–4 lauset]
