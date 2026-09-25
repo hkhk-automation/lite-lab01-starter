@@ -1,84 +1,70 @@
 {
   "tests": [
     {
-      "name": "1. Klassi failid olemas",
+      "name": "K1. Klassi failid olemas",
       "setup": "",
       "run": "for f in halb.sh parem.sh inventory.ini bootstrap.yml logid/teine_jooks.txt README.md; do test -f \"$f\" || { echo \"PUUDU: $f\"; exit 1; }; done; echo OK",
-      "input": "",
-      "output": "OK",
-      "comparison": "included",
-      "timeout": 1,
-      "points": 10
+      "input": "", "output": "OK", "comparison": "included", "timeout": 1, "points": 5
     },
     {
-      "name": "2. bootstrap.yml süntaks korras",
+      "name": "K2. bootstrap.yml süntaks korras",
       "setup": "pip install --quiet ansible",
       "run": "ansible-playbook -i inventory.ini bootstrap.yml --syntax-check",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 3,
-      "points": 10
+      "input": "", "output": "", "comparison": "included", "timeout": 3, "points": 10
     },
     {
-      "name": "3. Päris moodulid: user, package/apt, copy, service; command/shell puudub",
+      "name": "K3. Päris moodulid, command/shell puudub",
       "setup": "",
       "run": "grep -qE 'user:' bootstrap.yml && grep -qE 'apt:|package:|dnf:' bootstrap.yml && grep -qE 'copy:' bootstrap.yml && grep -qE 'service:|systemd:' bootstrap.yml && ! grep -qE '(command|shell):' bootstrap.yml && echo OK",
-      "input": "",
-      "output": "OK",
-      "comparison": "included",
-      "timeout": 1,
-      "points": 10
+      "input": "", "output": "OK", "comparison": "included", "timeout": 1, "points": 10
     },
     {
-      "name": "4. Tõend: teine jooks changed=0",
+      "name": "K4. Tõend: teine jooks changed=0",
       "setup": "",
       "run": "grep -q 'PLAY RECAP' logid/teine_jooks.txt && grep -q 'changed=0' logid/teine_jooks.txt && echo OK",
-      "input": "",
-      "output": "OK",
-      "comparison": "included",
-      "timeout": 1,
-      "points": 10
+      "input": "", "output": "OK", "comparison": "included", "timeout": 1, "points": 10
     },
     {
-      "name": "5. Tõend: kolm masinat, kõigil changed=0",
+      "name": "K5. Tõend: kolm masinat, kõigil changed=0",
       "setup": "",
       "run": "grep -q 'PLAY RECAP' logid/kolm_masinat.txt && test \"$(grep -c 'changed=0' logid/kolm_masinat.txt)\" -ge 3 && ! grep -qE 'unreachable=[1-9]|failed=[1-9]' logid/kolm_masinat.txt && echo OK",
-      "input": "",
-      "output": "OK",
-      "comparison": "included",
-      "timeout": 1,
-      "points": 15
+      "input": "", "output": "OK", "comparison": "included", "timeout": 1, "points": 10
     },
     {
-      "name": "6. Kodutöö: admin.yml (loop, authorized_key), teine jooks changed=0",
+      "name": "H1. admin.yml: loop, authorized_key, changed=0",
       "setup": "",
-      "run": "test -f admin.yml && ansible-playbook -i inventory.ini admin.yml --syntax-check >/dev/null && grep -q 'loop' admin.yml && grep -q 'authorized_key' admin.yml && grep -q 'changed=0' logid/admin_teine_jooks.txt && echo OK",
-      "input": "",
-      "output": "OK",
-      "comparison": "included",
-      "timeout": 3,
-      "points": 15
+      "run": "ansible-playbook -i inventory.ini admin.yml --syntax-check >/dev/null && grep -q 'loop' admin.yml && grep -q 'authorized_key' admin.yml && grep -q 'changed=0' logid/admin_teine_jooks.txt && echo OK",
+      "input": "", "output": "OK", "comparison": "included", "timeout": 3, "points": 10
     },
     {
-      "name": "7. Kodutöö: hardening.yml (lineinfile, validate, handler), teine jooks changed=0",
+      "name": "H2. hardening.yml: lineinfile, validate, handler, changed=0",
       "setup": "",
-      "run": "test -f hardening.yml && ansible-playbook -i inventory.ini hardening.yml --syntax-check >/dev/null && grep -q 'lineinfile' hardening.yml && grep -q 'validate' hardening.yml && grep -q 'handlers' hardening.yml && grep -q 'changed=0' logid/hardening_teine_jooks.txt && echo OK",
-      "input": "",
-      "output": "OK",
-      "comparison": "included",
-      "timeout": 3,
-      "points": 15
+      "run": "ansible-playbook -i inventory.ini hardening.yml --syntax-check >/dev/null && grep -q 'lineinfile' hardening.yml && grep -q 'validate' hardening.yml && grep -q 'handlers' hardening.yml && grep -q 'changed=0' logid/hardening_teine_jooks.txt && echo OK",
+      "input": "", "output": "OK", "comparison": "included", "timeout": 3, "points": 10
     },
     {
-      "name": "8. Kodutöö: oma/ playbook + README, vastused.md",
+      "name": "H3. baas.yml: nimekirjad, state: absent, changed=0",
       "setup": "",
-      "run": "ls oma/*.yml >/dev/null 2>&1 && test -f oma/README.md && test -f vastused.md && echo OK",
-      "input": "",
-      "output": "OK",
-      "comparison": "included",
-      "timeout": 1,
-      "points": 15
+      "run": "ansible-playbook -i inventory.ini baas.yml --syntax-check >/dev/null && grep -q 'absent' baas.yml && grep -q 'changed=0' logid/baas_teine_jooks.txt && echo OK",
+      "input": "", "output": "OK", "comparison": "included", "timeout": 3, "points": 7
+    },
+    {
+      "name": "H4. raport.yml: fetch, 3 raportit",
+      "setup": "",
+      "run": "ansible-playbook -i inventory.ini raport.yml --syntax-check >/dev/null && grep -q 'fetch' raport.yml && test \"$(find raportid -type f | wc -l)\" -ge 3 && echo OK",
+      "input": "", "output": "OK", "comparison": "included", "timeout": 3, "points": 7
+    },
+    {
+      "name": "H5–H6. cron.yml changed=0 ja drift_check olemas",
+      "setup": "",
+      "run": "ansible-playbook -i inventory.ini cron.yml --syntax-check >/dev/null && grep -q 'cron' cron.yml && grep -q 'changed=0' logid/cron_teine_jooks.txt && test -f logid/drift_check.txt && echo OK",
+      "input": "", "output": "OK", "comparison": "included", "timeout": 3, "points": 7
+    },
+    {
+      "name": "I + III. markmed.md, vastused.md (≥400 sõna), oma/ playbook + README",
+      "setup": "",
+      "run": "test -f markmed.md && test \"$(wc -w < vastused.md)\" -ge 400 && ls oma/*.yml >/dev/null 2>&1 && test -f oma/README.md && echo OK",
+      "input": "", "output": "OK", "comparison": "included", "timeout": 1, "points": 14
     }
   ]
 }
