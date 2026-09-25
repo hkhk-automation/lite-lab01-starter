@@ -37,6 +37,14 @@ See fail on ülesande kirjeldus, seda ei pea muutma. Oma töö dokumenteerid fai
 
 ---
 
+## Kontrollnimekiri (Issues)
+
+Pärast esimest push'i ilmuvad repo **Issues** alla kõik ülesanded eraldi issue'dena (sildid `klassitöö` ja `kodutöö`). Sule issue, kui ta on tehtud. Kui issue'sid ei ilmunud: **Actions → Ava ülesanded → Run workflow**.
+
+Kui jääd kinni: **Issues → New issue → Vajan abi**. Juhendaja saab teate.
+
+---
+
 ## Kontroll (roheline = valmis)
 
 Igal push'il jookseb automaatne kontroll, tulemust näed **Actions** vahelehel. Kokku 100 punkti: klassitöö 45, kodutöö 55.
