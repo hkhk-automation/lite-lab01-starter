@@ -1,6 +1,6 @@
 # Lab 01 · Esimene playbook
 
-> Ülesanne on failis [ULESANNE.md](ULESANNE.md). Täida see mall oma tööga: asenda nurksulgudes kohad ja kustuta see kasti.
+> Ülesanne on failis [ULESANNE.md](ULESANNE.md). Täida see mall oma tööga: asenda nurksulgudes kohad ja kustuta see kast.
 
 **Nimi:** [sinu nimi]
 
@@ -21,7 +21,7 @@ Igas `veeb`-grupi masinas:
 
 ## Masinad
 
-| Nimi | OS | Veebi juurkaust |
+| Nimi | OS ja versioon | Mida avaleht näitab |
 |---|---|---|
 | vm1 | [ ] | [ ] |
 | vm2 | [ ] | [ ] |
@@ -41,6 +41,6 @@ Igas `veeb`-grupi masinas:
 
    [2–4 lauset]
 
-3. Mis sinu töökohal praegu triivib, ja kuidas see välja tuleks?
+3. Mis võiks sinu VM-ides või koduarvutis aja jooksul triivida, ja kuidas see välja tuleks?
 
    [2–4 lauset]

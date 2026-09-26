@@ -1,8 +1,8 @@
 # Lab 01 — Esimene playbook · ülesanne
 
-📘 **Loeng:** <https://hkhk-automation.github.io/devops-lite/week01/lecture/>
-📖 **Praktikum:** <https://hkhk-automation.github.io/devops-lite/week01/lab/>
-🏠 **Kodune õpe ja kodutöö:** <https://hkhk-automation.github.io/devops-lite/week01/homework/>
+**Loeng:** <https://hkhk-automation.github.io/devops-lite/week01/lecture/>
+**Praktikum:** <https://hkhk-automation.github.io/devops-lite/week01/lab/>
+**Kodune õpe ja kodutöö:** <https://hkhk-automation.github.io/devops-lite/week01/homework/>
 
 See fail on ülesande kirjeldus, seda ei pea muutma. Oma töö dokumenteerid failis **`README.md`**, mis on mall: täida see praktikumi dokumenteerimise osas. Kõik failid lähevad repo juurkausta. Playbookid ehitad ise.
 
@@ -13,7 +13,7 @@ See fail on ülesande kirjeldus, seda ei pea muutma. Oma töö dokumenteerid fai
 Töö käib kooli Proxmoxi klastris sulle antud kolmes **AlmaLinux 9** VM-is. **vm1 on sinu control node**, sealt haldad kõiki kolme.
 
 1. Juhendajalt: vm1, vm2, vm3 IP-d, kasutajanimi, parool.
-2. Ühendu vm1-ga (VS Code Remote-SSH või PowerShellis `ssh <kasutaja>@<vm1-ip>`) ja anna masinale nimi: `sudo hostnamectl set-hostname vm1`.
+2. Ühendu vm1-ga (VS Code Remote-SSH või PowerShellis `ssh <kasutaja>@<vm1-ip>`). Vaheta kõigis kolmes masinas parool (`passwd`, igal pool sama uus parool) ja anna neile nimed (`sudo hostnamectl set-hostname vm1`, `vm2`, `vm3`).
 3. Paigalda tööriistad: `sudo dnf install -y git ansible-core` ja `ansible-galaxy collection install ansible.posix:1.5.4`.
 4. Loo vm1-s SSH-võti (`ssh-keygen -t ed25519`) ja lisa avalik võti GitHubi: **Settings → SSH and GPG keys**.
 5. Klooni see repo SSH-ga: **Code → SSH** → `git clone git@github.com:hkhk-automation/<sinu-repo>.git`.
@@ -51,9 +51,9 @@ Täpselt samm-sammult: praktikumi osa **0 · Valmisolek**.
 
 ---
 
-## Kontrollnimekiri (Issues ja tahvel)
+## Kontrollnimekiri (Issues ja projekt)
 
-Su repo **Issues** all on selle nädala ülesanded (sildid `klassitöö` ja `kodutöö`). Samad kaardid on kursuse tahvlil (GitHubi org `hkhk-automation` → **Projects** → *ITS-25 Automatiseerimine*), vaade **Minu tööd**. Igas issue's on juhendi link ja mis peab valmis olema. Sule issue, kui osa on tehtud.
+Su repo **Issues** all on selle nädala issue **Lab 01 · Esimene playbook**. Selles on kõik osad (klassitöö ja kodutöö) märkeruutudena koos juhendi linkidega. Märgi ruut, kui osa on tehtud. Kui kõik on tehtud, sulge issue. Sama issue on kursuse projektis (GitHubi org `hkhk-automation` → **Projects** → *ITS-25 Automatiseerimine*), vaade **Minu tööd**.
 
 Kui jääd kinni: **Issues → New issue → Vajan abi**. Juhendaja saab teate.
 
