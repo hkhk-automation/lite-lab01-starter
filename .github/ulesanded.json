@@ -38,9 +38,7 @@
       "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week01/homework/ (osa **H5**)\n\n→ `cron.yml`, `logid/cron_teine_jooks.txt`" },
     { "pealkiri": "Kodutöö H6 · Drift ja --check", "silt": "kodutöö", "nadal": 1,
       "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week01/homework/ (osa **H6**)\n\n→ `logid/drift_check.txt`, lõik `vastused.md`-s" },
-    { "pealkiri": "Kodutöö III · Oma töö", "silt": "kodutöö", "nadal": 1,
-      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week01/homework/ (osa **III**)\n\n→ `oma/*.yml`, `oma/README.md`" },
-    { "pealkiri": "Kodutöö IV · Eneseanalüüs", "silt": "kodutöö", "nadal": 1,
-      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week01/homework/ (osa **IV**)\n\n`vastused.md` lõpus. Boonus ja lint on vabatahtlikud." }
+    { "pealkiri": "Kodutöö III · Eneseanalüüs", "silt": "kodutöö", "nadal": 1,
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week01/homework/ (osa **III**)\n\n`vastused.md` lõpus. Boonus ja lint on vabatahtlikud." }
   ]
 }
