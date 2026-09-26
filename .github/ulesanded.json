@@ -1,9 +1,5 @@
 {
   "juhendaja": "mariahkhk",
-  "nadalad": {
-    "1": { "pealkiri": "Nädal 1 · Esimene playbook", "tahtaeg": "2026-10-09T20:59:00Z",
-           "kirjeldus": "K1 klassitöö (A1–B, README) ja kodutöö (I–IV, H1–H6)." }
-  },
   "ulesanded": [
     { "pealkiri": "A1 · Käsitsi seadistus", "silt": "klassitöö", "nadal": 1,
       "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week01/lab/ (osa **A1**)\n\nKontrolltabel 4 reaga, `curl -s localhost` vastab." },
