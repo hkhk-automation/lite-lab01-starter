@@ -4,7 +4,7 @@
 **Praktikum:** <https://hkhk-automation.github.io/devops-lite/week01/lab/>
 **Kodune õpe ja kodutöö:** <https://hkhk-automation.github.io/devops-lite/week01/homework/>
 
-See fail on ülesande kirjeldus, seda ei pea muutma. Oma töö dokumenteerid failis **`README.md`**, mis on mall: täida see praktikumi dokumenteerimise osas. Kõik failid lähevad repo juurkausta. Playbookid ehitad ise.
+See fail on ülesande kirjeldus, seda ei pea muutma. Klassitöö dokumenteerid failis **`README.md`**, mis on mall: täida see praktikumi dokumenteerimise osas. Kõik failid lähevad repo juurkausta. Playbookid ehitad ise.
 
 ---
 
@@ -39,15 +39,14 @@ Täpselt samm-sammult: [Töökeskkond](https://hkhk-automation.github.io/devops-
 
 | Fail | Kust |
 |---|---|
-| `markmed.md`, `vastused.md` | I, H6, IV |
+| `markmed.md`, `vastused.md` | I, H6, III |
 | `admin.yml` + `logid/admin_teine_jooks.txt` | H1 |
 | `hardening.yml` + `logid/hardening_teine_jooks.txt` | H2 |
 | `baas.yml` + `logid/baas_teine_jooks.txt` | H3 |
 | `raport.yml` + `raportid/` | H4 |
 | `cron.yml` + `logid/cron_teine_jooks.txt` | H5 |
 | `logid/drift_check.txt` | H6 |
-| `oma/*.yml` + `oma/README.md` | III |
-| `boonus.yml` | IV, vabatahtlik |
+| `boonus.yml` | III, vabatahtlik |
 
 ---
 
@@ -68,7 +67,7 @@ Igal push'il jookseb automaatne kontroll **Autograde** (vahekaart **Actions**). 
 | K1–K5: klassi failid, README täidetud, süntaks, päris moodulid, `changed=0` ühel ja kolmel masinal | 45 |
 | H1 `admin.yml`, H2 `hardening.yml` | 20 |
 | H3 `baas.yml`, H4 `raport.yml`, H5–H6 `cron.yml` + drift | 21 |
-| Märkmed, vastused (≥150 sõna), oma töö | 14 |
+| Märkmed ja vastused (≥150 sõna) | 14 |
 
 Tõendi salvestad nii (failinimed on tabelis ülal):
 
