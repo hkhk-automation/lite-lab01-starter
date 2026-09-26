@@ -67,7 +67,7 @@ Igal push'il jookseb automaatne kontroll **Autograde** (vahekaart **Actions**). 
 | K1–K5: klassi failid, README täidetud, süntaks, päris moodulid, `changed=0` ühel ja kolmel masinal | 45 |
 | H1 `admin.yml`, H2 `hardening.yml` | 20 |
 | H3 `baas.yml`, H4 `raport.yml`, H5–H6 `cron.yml` + drift | 21 |
-| Märkmed ja vastused (≥150 sõna) | 14 |
+| Märkmed ja vastused | 14 |
 
 Tõendi salvestad nii (failinimed on tabelis ülal):
 

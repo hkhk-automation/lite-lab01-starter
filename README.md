@@ -35,12 +35,12 @@ Igas `veeb`-grupi masinas:
 
 1. Mitu rida pidid muutma, et üks masin asenduks kolmega? Mitu oleks 50 puhul?
 
-   [2–4 lauset]
+   [1–2 lauset]
 
 2. Mis ennustus läks mööda ja miks?
 
-   [2–4 lauset]
+   [1–2 lauset]
 
 3. Mis võiks sinu VM-ides või koduarvutis aja jooksul triivida, ja kuidas see välja tuleks?
 
-   [2–4 lauset]
+   [1–2 lauset]
