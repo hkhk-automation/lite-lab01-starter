@@ -10,15 +10,15 @@ See fail on ülesande kirjeldus, seda ei pea muutma. Oma töö dokumenteerid fai
 
 ## Enne alustamist: töökeskkond
 
-Klassiarvuti on Windows, töö käib kooli Proxmoxi klastris sulle antud kolmes VM-is. **vm1 on sinu control node**, sealt haldad kõiki kolme.
+Töö käib kooli Proxmoxi klastris sulle antud kolmes **AlmaLinux 9** VM-is. **vm1 on sinu control node**, sealt haldad kõiki kolme.
 
 1. Juhendajalt: vm1, vm2, vm3 IP-d, kasutajanimi, parool.
-2. Ühendu vm1-ga: VS Code → Remote-SSH → *Connect to Host* → `<kasutaja>@<vm1-ip>` või PowerShellis `ssh <kasutaja>@<vm1-ip>`.
-3. vm1-s kontrolli: `hostname`, `git --version`, `ansible --version`.
-4. GitHubis loo fine-grained token (org `hkhk-automation`, *Contents: Read and write*), sest `git push` ei võta kontoparooli.
-5. Klooni see repo vm1 kodukausta: `cd ~ && git clone <selle repo URL>`.
+2. Ühendu vm1-ga (VS Code Remote-SSH või PowerShellis `ssh <kasutaja>@<vm1-ip>`) ja anna masinale nimi: `sudo hostnamectl set-hostname vm1`.
+3. Paigalda tööriistad: `sudo dnf install -y git ansible-core` ja `ansible-galaxy collection install ansible.posix:1.5.4`.
+4. Loo vm1-s SSH-võti (`ssh-keygen -t ed25519`) ja lisa avalik võti GitHubi: **Settings → SSH and GPG keys**.
+5. Klooni see repo SSH-ga: **Code → SSH** → `git clone git@github.com:hkhk-automation/<sinu-repo>.git`.
 
-Täpsemalt: praktikumi osa **0 · Valmisolek**.
+Täpselt samm-sammult: praktikumi osa **0 · Valmisolek**.
 
 ---
 
@@ -53,15 +53,15 @@ Täpsemalt: praktikumi osa **0 · Valmisolek**.
 
 ## Kontrollnimekiri (Issues ja tahvel)
 
-Juhendaja avab kohtumise alguses su repo **Issues** alla kõik ülesanded eraldi issue'dena (sildid `klassitöö` ja `kodutöö`). Samad kaardid on kursuse tahvlil (GitHubi org `hkhk-automation` → Projects), vaade **Minu tööd**. Igas issue's on juhendi link, mida teha ja millal on valmis. Sule issue, kui osa on tehtud.
+Su repo **Issues** all on selle nädala ülesanded (sildid `klassitöö` ja `kodutöö`). Samad kaardid on kursuse tahvlil (GitHubi org `hkhk-automation` → **Projects** → *ITS-25 Automatiseerimine*), vaade **Minu tööd**. Igas issue's on juhendi link ja mis peab valmis olema. Sule issue, kui osa on tehtud.
 
 Kui jääd kinni: **Issues → New issue → Vajan abi**. Juhendaja saab teate.
 
 ---
 
-## Kontroll (roheline = valmis)
+## Kontroll
 
-Igal push'il jookseb automaatne kontroll, tulemust näed **Actions** vahelehel. Kokku 100 punkti: klassitöö 45, kodutöö 55.
+Igal push'il jookseb automaatne kontroll **Autograde** (vahekaart **Actions**). Loeb **punktisumma**, mitte värv: kuni kodutöö pole tehtud, on kontroll punane, ja see on ootuspärane. Kokku 100 punkti: klassitöö 45, kodutöö 55.
 
 | Kontroll | Punkte |
 |---|---|
@@ -70,10 +70,12 @@ Igal push'il jookseb automaatne kontroll, tulemust näed **Actions** vahelehel. 
 | H3 `baas.yml`, H4 `raport.yml`, H5–H6 `cron.yml` + drift | 21 |
 | Märkmed, vastused (≥400 sõna), oma töö | 14 |
 
-Tõendi salvestad nii:
+Tõendi salvestad nii (failinimed on tabelis ülal):
 
 ```bash
-ansible-playbook -i inventory.ini <fail>.yml | tee logid/<fail>_teine_jooks.txt
+ansible-playbook bootstrap.yml | tee logid/teine_jooks.txt          # A5
+ansible-playbook bootstrap.yml --limit veeb | tee logid/kolm_masinat.txt   # B
+ansible-playbook admin.yml | tee logid/admin_teine_jooks.txt        # H1, teised samamoodi
 ```
 
 `changed=0` tuleb ainult siis, kui kõik on juba paigas. Seega salvesta **teine** jooks.
