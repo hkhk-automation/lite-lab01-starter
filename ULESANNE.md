@@ -18,7 +18,7 @@ Töö käib kooli Proxmoxi klastris sulle antud kolmes **AlmaLinux 9** VM-is. **
 4. Loo vm1-s SSH-võti (`ssh-keygen -t ed25519`) ja lisa avalik võti GitHubi: **Settings → SSH and GPG keys**.
 5. Klooni see repo SSH-ga: **Code → SSH** → `git clone git@github.com:hkhk-automation/<sinu-repo>.git`.
 
-Täpselt samm-sammult: praktikumi osa **0 · Valmisolek**.
+Täpselt samm-sammult: [Töökeskkond](https://hkhk-automation.github.io/devops-lite/keskkond/).
 
 ---
 
