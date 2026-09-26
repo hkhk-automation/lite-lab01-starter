@@ -1,5 +1,7 @@
 {
   "juhendaja": "mariahkhk",
+  "pealkiri": "Lab 01 · Esimene playbook",
+  "tahtaeg": "09.10 kell 23:59",
   "ulesanded": [
     { "pealkiri": "A1 · Käsitsi seadistus", "silt": "klassitöö", "nadal": 1,
       "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week01/lab/ (osa **A1**)\n\nKontrolltabel 4 reaga, `curl -s localhost` vastab." },
@@ -20,7 +22,7 @@
     { "pealkiri": "B · Kolm serverit", "silt": "klassitöö", "nadal": 1,
       "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week01/lab/ (osa **B**)\n\nSSH-võtmed, `[veeb]` grupp, juurkaust fakti järgi, teine jooks kõigil `changed=0`.\n\n→ `logid/kolm_masinat.txt`" },
     { "pealkiri": "README täidetud ja push", "silt": "klassitöö", "nadal": 1,
-      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week01/lab/ (osa **Dokumenteerimine**)\n\n`README.md` mall täidetud, push tehtud, Actions K1–K5 rohelised." },
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week01/lab/ (osa **Dokumenteerimine**)\n\n`README.md` mall täidetud, push tehtud, Autograde K1–K5 läbitud." },
     { "pealkiri": "Kodutöö I · Lugemine ja kordamisküsimused", "silt": "kodutöö", "nadal": 1,
       "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week01/homework/ (osa **I**)\n\n→ `markmed.md`, `vastused.md`" },
     { "pealkiri": "Kodutöö H1 · admin.yml", "silt": "kodutöö", "nadal": 1,
