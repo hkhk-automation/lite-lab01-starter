@@ -8,6 +8,20 @@ See fail on ülesande kirjeldus, seda ei pea muutma. Oma töö dokumenteerid fai
 
 ---
 
+## Enne alustamist: töökeskkond
+
+Klassiarvuti on Windows, töö käib kooli Proxmoxi klastris sulle antud kolmes VM-is. **vm1 on sinu control node**, sealt haldad kõiki kolme.
+
+1. Juhendajalt: vm1, vm2, vm3 IP-d, kasutajanimi, parool.
+2. Ühendu vm1-ga: VS Code → Remote-SSH → *Connect to Host* → `<kasutaja>@<vm1-ip>` või PowerShellis `ssh <kasutaja>@<vm1-ip>`.
+3. vm1-s kontrolli: `hostname`, `git --version`, `ansible --version`.
+4. GitHubis loo fine-grained token (org `hkhk-automation`, *Contents: Read and write*), sest `git push` ei võta kontoparooli.
+5. Klooni see repo vm1 kodukausta: `cd ~ && git clone <selle repo URL>`.
+
+Täpsemalt: praktikumi osa **0 · Valmisolek**.
+
+---
+
 ## Mis peab lõpuks repos olema
 
 **Klassis (praktikum):**
