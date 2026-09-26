@@ -35,16 +35,36 @@ jobs:
               catch (e) { if (e.status !== 422) throw e; }
             }
 
+            // Nädala milestone'id (tudeng näeb Issues -> Milestones nädala kaupa)
+            const mOlemas = await github.paginate(github.rest.issues.listMilestones,
+              { owner, repo, state: 'all', per_page: 100 });
+            const milestone = {};
+            for (const [nr, n] of Object.entries(cfg.nadalad || {})) {
+              let m = mOlemas.find(x => x.title === n.pealkiri);
+              if (!m) {
+                m = (await github.rest.issues.createMilestone({ owner, repo,
+                  title: n.pealkiri, description: n.kirjeldus || '', due_on: n.tahtaeg })).data;
+              }
+              milestone[nr] = m.number;
+            }
+
             const olemas = await github.paginate(github.rest.issues.listForRepo,
               { owner, repo, state: 'all', per_page: 100 });
-            const pealkirjad = new Set(olemas.filter(i => !i.pull_request).map(i => i.title));
+            const issued = new Map(olemas.filter(i => !i.pull_request).map(i => [i.title, i]));
 
-            let uusi = 0;
+            let uusi = 0, maaratud = 0;
             for (const u of cfg.ulesanded) {
-              if (pealkirjad.has(u.pealkiri)) continue;
-              await github.rest.issues.create({
-                owner, repo, title: u.pealkiri, body: u.keha, labels: [u.silt],
-              });
-              uusi++;
+              const m = milestone[u.nadal];
+              const i = issued.get(u.pealkiri);
+              if (!i) {
+                await github.rest.issues.create({
+                  owner, repo, title: u.pealkiri, body: u.keha, labels: [u.silt], milestone: m,
+                });
+                uusi++;
+              } else if (m && !i.milestone) {
+                // juhendaja skriptiga loodud issue: lisa ainult milestone
+                await github.rest.issues.update({ owner, repo, issue_number: i.number, milestone: m });
+                maaratud++;
+              }
             }
-            console.log(`Uusi issue'sid: ${uusi}`);
+            console.log(`Uusi issue'sid: ${uusi}, milestone lisatud: ${maaratud}`);
