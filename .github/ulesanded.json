@@ -2,6 +2,7 @@
   "juhendaja": "mariahkhk",
   "pealkiri": "Lab 01 · Esimene playbook",
   "tahtaeg": "09.10 kell 23:59",
+  "sildid": ["K1", "ansible", "playbook", "ssh", "nginx"],
   "ulesanded": [
     { "pealkiri": "A1 · Käsitsi seadistus", "silt": "klassitöö", "nadal": 1,
       "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week01/lab/ (osa **A1**)\n\nKontrolltabel 4 reaga, `curl -s localhost` vastab." },
