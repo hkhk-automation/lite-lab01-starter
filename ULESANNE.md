@@ -37,9 +37,9 @@ See fail on ülesande kirjeldus, seda ei pea muutma. Oma töö dokumenteerid fai
 
 ---
 
-## Kontrollnimekiri (Issues)
+## Kontrollnimekiri (Issues ja tahvel)
 
-Pärast esimest push'i ilmuvad repo **Issues** alla kõik ülesanded eraldi issue'dena (sildid `klassitöö` ja `kodutöö`). Sule issue, kui ta on tehtud. Kui issue'sid ei ilmunud: **Actions → Ava ülesanded → Run workflow**.
+Juhendaja avab kohtumise alguses su repo **Issues** alla kõik ülesanded eraldi issue'dena (sildid `klassitöö` ja `kodutöö`). Samad kaardid on kursuse tahvlil (GitHubi org `hkhk-automation` → Projects), vaade **Minu tööd**. Igas issue's on juhendi link, mida teha ja millal on valmis. Sule issue, kui osa on tehtud.
 
 Kui jääd kinni: **Issues → New issue → Vajan abi**. Juhendaja saab teate.
 
