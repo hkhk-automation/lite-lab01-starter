@@ -23,7 +23,7 @@
     { "pealkiri": "B · Kolm serverit", "silt": "klassitöö", "nadal": 1,
       "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week01/lab/ (osa **B**)\n\nSSH-võtmed, `[veeb]` grupp, tulemüür avatud, `curl` näitab iga masina nime, teine jooks kõigil `changed=0`.\n\n→ `logid/kolm_masinat.txt`" },
     { "pealkiri": "README täidetud ja push", "silt": "klassitöö", "nadal": 1,
-      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week01/lab/ (osa **Dokumenteerimine**)\n\n`README.md` mall täidetud, push tehtud, Autograde K1–K5 läbitud." },
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week01/lab/ (osa **Esitamine**)\n\n`README.md` mall täidetud, push tehtud, Autograde K1–K5 läbitud." },
     { "pealkiri": "Kodutöö I · Lugemine ja küsimused", "silt": "kodutöö", "nadal": 1,
       "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week01/homework/ (osa **I**)\n\n→ `markmed.md`, `vastused.md`" },
     { "pealkiri": "Kodutöö H1 · Loo kasutajad ja ligipääs", "silt": "kodutöö", "nadal": 1,
