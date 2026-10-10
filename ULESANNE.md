@@ -4,7 +4,7 @@
 **Praktikum:** <https://hkhk-automation.github.io/devops-lite/week01/lab/>
 **Kodune õpe ja kodutöö:** <https://hkhk-automation.github.io/devops-lite/week01/homework/>
 
-See fail on ülesande kirjeldus, seda ei pea muutma. Klassitöö dokumenteerid failis **`README.md`**, mis on mall: täida see praktikumi dokumenteerimise osas. Kõik failid lähevad repo juurkausta. Playbookid ehitad ise.
+See fail on ülesande kirjeldus, seda ei pea muutma. Klassitöö dokumenteerid failis **`README.md`**, mis on mall: täida see praktikumi osas **Esitamine**. Kõik failid lähevad repo juurkausta. Playbookid ehitad ise.
 
 ---
 
@@ -33,7 +33,7 @@ Täpselt samm-sammult: [Töökeskkond](https://hkhk-automation.github.io/devops-
 | `bootstrap.yml` | A4, B |
 | `logid/teine_jooks.txt` | A5 |
 | `logid/kolm_masinat.txt` | B |
-| `README.md` täidetud (nimi, soovitud olek, käivituskäsk, masinad, drift, peegeldus) | Dokumenteerimine |
+| `README.md` täidetud (nimi, soovitud olek, käivituskäsk, masinad, drift, peegeldus) | Esitamine |
 
 **Kodus (kodune õpe ja kodutöö):**
 
