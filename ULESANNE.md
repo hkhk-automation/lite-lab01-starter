@@ -35,7 +35,7 @@ Täpselt samm-sammult: [Töökeskkond](https://hkhk-automation.github.io/devops-
 | `logid/kolm_masinat.txt` | B |
 | `README.md` täidetud (nimi, soovitud olek, käivituskäsk, masinad, drift, peegeldus) | Esitamine |
 
-**Kodus (kodune õpe ja kodutöö):**
+**Kodus (kodune õpe ja kodutöö, vabatahtlik boonus):**
 
 | Fail | Kust |
 |---|---|
@@ -60,14 +60,15 @@ Kui jääd kinni: **Issues → New issue → Vajan abi**. Juhendaja saab teate.
 
 ## Kontroll
 
-Igal push'il jookseb automaatne kontroll **Autograde** (vahekaart **Actions**). Loeb **punktisumma**, mitte värv: kuni kodutöö pole tehtud, on kontroll punane, ja see on ootuspärane. Kokku 100 punkti: klassitöö 45, kodutöö 55.
+Igal push'il jookseb automaatne kontroll **Autograde** (vahekaart **Actions**). Hinne: K1–K5 (45 p). README ja kodutöö on vabatahtlik boonus – punane rist Actionsis tähendab ainult, et boonus on tegemata.
 
 | Kontroll | Punkte |
 |---|---|
-| K1–K5: klassi failid, README täidetud, süntaks, päris moodulid, `changed=0` ühel ja kolmel masinal | 45 |
-| H1 `admin.yml`, H2 `hardening.yml` | 20 |
-| H3 `baas.yml`, H4 `raport.yml`, H5–H6 `cron.yml` + drift | 21 |
-| Märkmed ja vastused | 14 |
+| K1–K5: klassi failid, süntaks, päris moodulid, `changed=0` ühel ja kolmel masinal | 45 |
+| BOONUS README mall täidetud | boonus |
+| BOONUS H1 `admin.yml`, H2 `hardening.yml` | boonus |
+| BOONUS H3 `baas.yml`, H4 `raport.yml`, H5–H6 `cron.yml` + drift | boonus |
+| BOONUS I märkmed ja vastused | boonus |
 
 Tõendi salvestad nii (failinimed on tabelis ülal):
 
